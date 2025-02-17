@@ -19,7 +19,7 @@ public class KafkaConsumerService {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
 
-    @KafkaListener(topics = "alertas", groupId = "subscripcion-grupo")
+    @KafkaListener(topics = "alertas", groupId = "grupo-consumidor")
     public void listen(String message) {
         System.out.println("Mensaje recibido desde Kafka: " + message);
         
